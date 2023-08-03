@@ -1,0 +1,116 @@
+.main__form {
+  width: 100%;
+  margin-top: 40px;
+  background-color: var(--dark-grey, #101d23);
+  color: #fff;
+  &-wrapper {
+    margin: 0 auto;
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-text {
+    width: 40%;
+    h4 {
+      color: var(--orange-accent, #e93d07);
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 135%;
+      margin-top: 78px;
+      letter-spacing: 0.432px;
+    }
+    p {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 135%;
+      letter-spacing: 0.5px;
+      padding-top: 20px;
+      margin-bottom: 78px;
+    }
+  }
+  &-inp {
+    input::placeholder {
+      color: #fff;
+    }
+    input {
+      background-color: transparent;
+      text-align: center;
+      padding: 10px 0;
+      border: 0;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      outline: 0;
+      &:nth-child(2) {
+        margin-left: 50px;
+      }
+    }
+    button {
+      display: block;
+      @include btn();
+      width: 192px;
+      height: 40px;
+      margin-top: 55px;
+      font-size: 14px;
+      margin-left: 55%;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .main__form {
+    &-text {
+      width: 40%;
+      h4 {
+        margin-top: 67px;
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 67px;
+      }
+    }
+    &-inp {
+      width: 60%;
+      input {
+        width: 143px;
+        &:nth-child(1) {
+          margin-left: 50px;
+        }
+        &:nth-child(2) {
+          margin-left: 45px;
+        }
+      }
+      button {
+        width: 134px;
+        height: 43px;
+        margin-left: 65%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .main__form {
+    &-wrapper {
+      flex-direction: column;
+    }
+    &-text {
+      width: 100%;
+      h4 {
+        margin-top: 31px;
+      }
+      p {
+        margin-bottom: 31px;
+      }
+    }
+    &-inp {
+      width: 100%;
+      button {
+        margin-left: 35%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
